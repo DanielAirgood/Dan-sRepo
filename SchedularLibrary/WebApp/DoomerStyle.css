@@ -6,10 +6,16 @@
     height: 50px;
 }
 
-nav {
+aside {
     background-color:#3F3B3B;
     height:100%;
     width:120px;
+    
+}
+
+section {
+    
+    margin-left:120px;
 }
 
 div {
@@ -20,6 +26,10 @@ div.backGround{
     position:absolute;
     height:100%;
     width:100%;
+}
+
+form{
+    position:inherit;
 }
 
 /*

@@ -1,17 +1,33 @@
-﻿
-<%@ Page  Language="C#" Title="Home Page" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApp._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="WebApp._Default" %>
 
-<asp:Content ID="Body" ContentPlaceHolderID=MainContent runat="server">
-
+<html>
+<body runat="server">
     <link rel="stylesheet" href="DoomerStyle.css" />
 
-        <style>
-            
-        </style>
+
 
     <div class="backGround">
-        <nav></nav>
-    </div>
-    
-</asp:Content>
 
+            <form runat="server" class="backGround">
+                <table style="padding-left:50px;">
+                    <tr>
+                        <td>
+                            <asp:TextBox CssClass=text-field runat=server ID="UserName"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:TextBox CssClass=text-field runat=server ID="Password"></asp:TextBox>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <asp:Button runat=server text="Submit" OnClick="OnSubmit" />
+                    </tr>
+                </table>
+            </form>
+    </div>
+
+
+</body>
+</html>

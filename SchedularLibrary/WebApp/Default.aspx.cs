@@ -34,5 +34,10 @@ namespace WebApp
 
             Response.Redirect("http://localhost:51538/Main.aspx");
         }
+
+        protected void OnSubmit(object sender, EventArgs e)
+        {
+            //TODO:check user in database
+        }
     }
 }

@@ -12,6 +12,5 @@ F:\Extrnl-Code file\EnterpriseApps\EnterpriseFinal-master\SchedularLibrary\Sched
 F:\Extrnl-Code file\EnterpriseApps\EnterpriseFinal-master\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.pdb
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\Debug\ExperimentalProc.dll
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\Debug\ExperimentalProc.pdb
-C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.csprojResolveAssemblyReference.cache
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.dll
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.pdb

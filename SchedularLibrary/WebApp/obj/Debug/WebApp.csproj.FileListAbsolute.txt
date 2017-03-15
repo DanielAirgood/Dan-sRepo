@@ -241,7 +241,6 @@ F:\Extrnl-Code file\EnterpriseApps\EnterpriseFinal-master\SchedularLibrary\WebAp
 F:\Extrnl-Code file\EnterpriseApps\EnterpriseFinal-master\SchedularLibrary\WebApp\bin\Microsoft.Owin.Security.Twitter.xml
 F:\Extrnl-Code file\EnterpriseApps\EnterpriseFinal-master\SchedularLibrary\WebApp\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 F:\Extrnl-Code file\EnterpriseApps\EnterpriseFinal-master\SchedularLibrary\WebApp\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\ApplicationInsights.config
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\csc.exe
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -253,7 +252,6 @@ C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\Syste
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\System.Reflection.Metadata.dll
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\vbc.exe
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\VBCSCompiler.exe
-C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\WebApp.dll.config
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\WebApp.dll
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\WebApp\bin\WebApp.pdb

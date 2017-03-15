@@ -1,1 +1,1 @@
-DataBase Conection String:Data Source=stusql;Initial Catalog=EnterpriseFinalBBB;Integrated Security=true;
+DataBase Conection String:Data Source=stusql;Initial Catalog=DanumCenter;Integrated Security=true;

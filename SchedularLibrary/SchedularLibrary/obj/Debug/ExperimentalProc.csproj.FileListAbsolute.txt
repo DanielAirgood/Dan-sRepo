@@ -14,3 +14,4 @@ C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\De
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\Debug\ExperimentalProc.pdb
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.dll
 C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.pdb
+C:\Users\da8\Documents\GitHub\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.csprojResolveAssemblyReference.cache

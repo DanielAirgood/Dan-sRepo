@@ -8,15 +8,14 @@ namespace ExperimentalProc.ClientManager
 {
     public class Client
     {
-        protected int SessionID;
+        protected string SessionID;
 
-        public Client(int SessionID)
+        public Client(string SessionID)
         {
-
-
+            this.SessionID = SessionID;
         }
 
-        public int getSessionID()
+        public string getSessionID()
         {
             return SessionID;
         }

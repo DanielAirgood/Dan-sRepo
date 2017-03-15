@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
+using System.Diagnostics;
 
 namespace ExperimentalProc.ClientManager
 {
@@ -16,14 +17,23 @@ namespace ExperimentalProc.ClientManager
             ActiveUsers = new List<Client>();
         }
 
-        public Client RetriveClient(int ClientID)
+        public Client RetriveClient(string sessionID)
         {
-            return ActiveUsers.Find(x => x.getSessionID() == ClientID);//TODO: alter this to use index
+            return ActiveUsers.Find(x => x.getSessionID() == sessionID);//TODO: alter this to use index
         }
 
-        public void AddUser()
+        public void AddUser(string sessionID)
         {
+            //Debug.WriteLine("User added" + sessionID);
 
+            ActiveUsers.Add(new Client(sessionID));
         }
+
+        public void RemoveUser(string sessionID)
+        {
+            ActiveUsers.Remove(RetriveClient(sessionID));
+        }
+        //TODO: overload this to remove client by object referance
+        
     }
 }

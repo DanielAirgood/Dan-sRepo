@@ -35,7 +35,7 @@ namespace ExperimentalProc.DataBase
                 //TODO add ADMIN config [ALPHA]
             }
 
-            //DataBaseConectionString = "server=stusql;uid=lc10;database=EnterpriseFinalBBB;";//deadcode: replaced with config
+            //DataBaseConectionString: Data Source=stusql;Initial Catalog=DanumCenter;Integrated Security=true;
             //config path: WebApp/Bin/DataBaseConfig.txt
 
             try
@@ -53,7 +53,7 @@ namespace ExperimentalProc.DataBase
 
         }
 
-        //TODO: Change this to allow for defined parameters for insert, so it can serve an actual use
+        //TODO: Alter this to work with new database [ALPHA]
         //generic insert into database statment
         public bool InsertRoomIntoDataBase(string Room_ID, string Room_Name)
         {
@@ -104,7 +104,7 @@ namespace ExperimentalProc.DataBase
             return true;
         }
 
-        //TODO: dosen't actually insert passed parameters into database : CourseQueryString [ALPHA]
+        //TODO: Alter this to work with new database [ALPHA]
         //Generic insert Course item to database
         public bool InsertCourseIntoDataBase(string Class_ID, string Course, string Course_ID)
         {
@@ -167,10 +167,31 @@ namespace ExperimentalProc.DataBase
             return true;
         }
 
+        //attempts to insert passed values into dataBase. returns false if failed
+        public bool InsertUserIntoDataBase()
+        {
+            SqlCommand cmd = new SqlCommand();
+
+            try
+            {
+                connection.Open();
+                cmd.Connection = connection;
+                cmd.CommandText = "INSERT INTO dbo.USER_REGISTRY(USER_NAME,USER_PASSWORD,USER_PRIVLAGE,USER_ONLINE) VALUES('testUser', '123test', '0', '0'); ";//alter this to insert passed params : CourseQueryString [ALPHA]
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException excp)
+            {
+                Debug.WriteLine("Failed to run InsertIntoDataBase: " + excp);
+                connection.Close();
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+
         //this method must be tested and verified to work [MASTER]
-        //Parameters (month,week,day) should be modified to allow for multiple target values [ALPHA]
-        //need to add defined parmeters for start and end times, must be finished before push to master [MASTER]
-        //UPDATE:Dan: I added the paremeters, now we need logic to handle it so we don't insert bad data to dataBase : timeLogic
+        //TODO: Alter this to work with new database [ALPHA]
         /*
          Attempts a brute force insert of all data considered valid by target parameters.
          Does not check against data inside database.
@@ -453,6 +474,7 @@ namespace ExperimentalProc.DataBase
             return true;
         }//end InsertSchedualItem
 
+        //TODO: Alter this to work with new database[ALPHA]
         /*
          * (bool) IsConflict(string selectQuery, string[] collumDats, out string[] badRows)
          * takes a query string that selects a table and compares it too a string array containg a set of row data for that table
@@ -518,6 +540,7 @@ namespace ExperimentalProc.DataBase
 
         }
 
+        //TODO: Alter this to work with new database[ALPHA]
         //functions like IsCOnflict but for single row, and returns all data in row as string array
         private bool IsConflictSingleRow(string selectQuery, string[] collumDats, out string[] rowDats)
         {

@@ -12,7 +12,7 @@
                 <table style="padding-left:50px;">
                     <tr>
                         <td>
-                            <asp:TextBox CssClass=text-field runat=server ID="UserName"></asp:TextBox>
+                            <asp:TextBox CssClass=text-field runat=server ID="UserName" ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

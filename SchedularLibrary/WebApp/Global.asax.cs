@@ -13,7 +13,7 @@ namespace WebApp
 {
     public class Global : HttpApplication
     {
-        public Manager ClientManager;
+        public static Manager ClientManager;
 
         void Application_Start(object sender, EventArgs e)
         {

@@ -34,6 +34,16 @@ namespace ExperimentalProc.ClientManager
             ActiveUsers.Remove(RetriveClient(sessionID));
         }
         //TODO: overload this to remove client by object referance
-        
+
+
+        //Index overload
+        public Client this[int index]
+        {
+            get
+            {
+                return ActiveUsers[index];
+            }
+
+        }
     }
 }

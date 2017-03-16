@@ -190,6 +190,36 @@ namespace ExperimentalProc.DataBase
             return true;
         }
 
+
+        //Check if user is registered with password
+        public bool RetriveUserFromDataBase(string userName, string password)
+        {
+            bool pass = false;
+            SqlCommand cmd = new SqlCommand("SELECT USER_NAME FROM dbo.USER_REGISTRY WHERE USER_NAME = 'testUser' AND USER_PASSWORD = '123test';", connection);
+            
+            try
+            {
+                connection.Open();
+               if(cmd.ExecuteScalar().ToString() == userName)
+                {
+                    pass = true;
+                } else
+                {
+                    pass = false;
+                }
+            }
+            catch (SqlException excp)
+            {
+                Debug.WriteLine("Failed to run InsertIntoDataBase: " + excp);
+                connection.Close();
+                return false;
+            }
+
+            connection.Close();
+
+            return pass;
+        }
+
         //this method must be tested and verified to work [MASTER]
         //TODO: Alter this to work with new database [ALPHA]
         /*

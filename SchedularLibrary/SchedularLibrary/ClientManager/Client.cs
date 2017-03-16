@@ -10,6 +10,8 @@ namespace ExperimentalProc.ClientManager
     {
         protected string SessionID;
 
+        public string User;
+
         public Client(string SessionID)
         {
             this.SessionID = SessionID;

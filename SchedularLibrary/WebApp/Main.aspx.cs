@@ -15,7 +15,7 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             CF = new CalanderFormater(2017);
-            this.week1day1.InnerText = "hello dare";//this string will be placed on the HTML page as raw HTML code
+            
             //this.Month.InnerText = GetMonth(1);
         }
         public string GetMonth(int monthID)//current content is temporay, meant only to be used as referance
@@ -39,7 +39,7 @@ namespace WebApp
         }
         public void GetDay(int dayID)
         {
-            this.week1day1.InnerText = "I know yur in der";//this is put on the page only when this method is called
+            
 
         }
     }

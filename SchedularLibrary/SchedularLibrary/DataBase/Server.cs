@@ -195,7 +195,7 @@ namespace ExperimentalProc.DataBase
         public bool RetriveUserFromDataBase(string userName, string password)
         {
             bool pass = false;
-            SqlCommand cmd = new SqlCommand("SELECT USER_NAME FROM dbo.USER_REGISTRY WHERE USER_NAME = 'testUser' AND USER_PASSWORD = '123test';", connection);
+            SqlCommand cmd = new SqlCommand("SELECT USER_NAME FROM dbo.USER_REGISTRY WHERE USER_NAME = '" + userName + "' AND USER_PASSWORD = '" + password + "';", connection);
             
             try
             {

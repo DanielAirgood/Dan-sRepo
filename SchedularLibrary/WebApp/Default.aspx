@@ -23,10 +23,14 @@
                     <tr>
                         <td>
                             <asp:Button runat=server text="Submit" OnClick="OnSubmit" />
+                            </td>
+                        <td><output id="output" runat="server"></output></td>
                     </tr>
                 </table>
             </form>
     </div>
+
+    
 
 
 </body>

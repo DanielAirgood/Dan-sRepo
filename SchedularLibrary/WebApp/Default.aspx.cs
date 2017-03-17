@@ -18,7 +18,7 @@ namespace WebApp
         protected void Page_Load(object sender, EventArgs e)
         {
             
-            DataBase = new ExperimentalProc.DataBase.Server();
+            DataBase = new ExperimentalProc.DataBase.Server();//DataBase Communication Object
             /*
             string[] month = new string[] { };
             string[] week = new string[] { };
@@ -30,26 +30,22 @@ namespace WebApp
             //dat.InsertUserIntoDataBase();//test statement
 
         }
-
-        public void  openWin(object sender, EventArgs e)
-        {
-            
-            Response.Redirect("http://localhost:53291/signuppage.html");
-        }
-        public void openWin2(object sender, EventArgs e)
-        {
-
-            Response.Redirect("http://localhost:51538/Main.aspx");
-        }
+        
 
         protected void OnSubmit(object sender, EventArgs e)
         {
             //TODO:check user in database
-            if(DataBase.RetriveUserFromDataBase(this.UserName.Text, this.UserName.Text))
+            if(DataBase.RetriveUserFromDataBase(this.UserName.Text, this.Password.Text))
             {
                 Global.ClientManager.RetriveClient(Session.SessionID).User = this.UserName.Text;
 
                 Debug.WriteLine("WELL DONE YOU BANGEROF!" + Global.ClientManager.RetriveClient(Session.SessionID).User);
+
+                Response.Redirect("Main.aspx");
+            } else
+            {
+                Debug.WriteLine(this.UserName.Text, this.Password.Text);
+                this.output.InnerText = "Invalid Login Credentials";
             }
            
         }

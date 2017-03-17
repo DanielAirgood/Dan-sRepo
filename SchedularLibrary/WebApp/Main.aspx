@@ -3,165 +3,35 @@
 <!DOCTYPE html>
 
 
+<html>
+    <body runat="server">
+        <link rel="stylesheet" href="DoomerStyle.css" />
+        <div class=backGround>
+            <label style="text-align:center; color:salmon; position:center;">THIS IS YOUR CALANDAAAAAAAR!</label>
+            <table>
+                <tr>
+                    <!-- Week1 -->
+                    <td><output id="Su_W1" class=DayItem></output></td><td><output id="M_W1" class=DayItem></output></td><td><output id="Tu_W1" class=DayItem></output></td><td><output id="W_W1" class=DayItem></output></td><td><output id="Th_W1" class=DayItem></output></td><td><output id="F_W1" class=DayItem></output></td><td><output id="Sa_W1" class=DayItem></output></td>
+                </tr>
+                <tr>
+                    <!-- Week2 -->
+                    <td><output id="Su_W2" class=DayItem></output></td><td><output id="M_W2" class=DayItem></output></td><td><output id="Tu_W2" class=DayItem></output></td><td><output id="W_W2" class=DayItem></output></td><td><output id="Th_W2" class=DayItem></output></td><td><output id="F_W2" class=DayItem></output></td><td><output id="Sa_W2" class=DayItem></output></td>
+                </tr>
+                <tr>
+                    <!-- Week3 -->
+                    <td><output id="Su_W3" class=DayItem></output></td><td><output id="M_W3" class=DayItem></output></td><td><output id="Tu_W3" class=DayItem></output></td><td><output id="W_W3" class=DayItem></output></td><td><output id="Th_W3" class=DayItem></output></td><td><output id="F_W3" class=DayItem></output></td><td><output id="Sa_W3" class=DayItem></output></td>
+                </tr>
+                <tr>
+                    <!-- Week4 -->
+                    <td><output id="Su_W4" class=DayItem></output></td><td><output id="M_W4" class=DayItem></output></td><td><output id="Tu_W4" class=DayItem></output></td><td><output id="W_W4" class=DayItem></output></td><td><output id="Th_W4" class=DayItem></output></td><td><output id="F_W4" class=DayItem></output></td><td><output id="Sa_W4" class=DayItem></output></td>
+                </tr>
+                <tr>
+                    <!-- Week5 -->
+                    <td><output id="Su_W5" class=DayItem></output></td><td><output id="M_W5" class=DayItem></output></td><td><output id="Tu_W5" class=DayItem></output></td><td><output id="W_W5" class=DayItem></output></td><td><output id="Th_W5" class=DayItem></output></td><td><output id="F_W5" class=DayItem></output></td><td><output id="Sa_W5" class=DayItem></output></td>
+                </tr>
+            </table>
 
+        </div>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <asp:head>
-
-<style>
-* {box-sizing:border-box;}
-ul {list-style-type: none;}
-body {font-family: Verdana,sans-serif;}
-
-.month {
-    padding: 70px 25px;
-    width: 100%;
-    background: #1abc9c;
-}
-
-.month ul {
-    margin: 0;
-    padding: 0;
-}
-
-.month ul li {
-    color: white;
-    font-size: 20px;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-}
-
-.month .prev {
-    float: left;
-    padding-top: 10px;
-}
-
-.month .next {
-    float: right;
-    padding-top: 10px;
-}
-
-.weekdays {
-    margin: 0;
-    padding: 10px 0;
-    background-color: #ddd;
-}
-
-.weekdays li {
-    display: inline-block;
-    width: 13.6%;
-    color: #666;
-    text-align: center;
-}
-
-.days {
-    padding: 10px 0;
-    background: #eee;
-    margin: 0;
-}
-
-.days li {
-    list-style-type: none;
-    display: inline-block;
-    width: 13.6%;
-    text-align: center;
-    margin-bottom: 5px;
-    font-size:12px;
-    color: #777;
-}
-
-.days li .active {
-    padding: 5px;
-    background: #1abc9c;
-    color: white !important
-}
-
-/* Add media queries for smaller screens */
-@media screen and (max-width:720px) {
-    .weekdays li, .days li {width: 13.1%;}
-}
-
-@media screen and (max-width: 420px) {
-    .weekdays li, .days li {width: 12.5%;}
-    .days li .active {padding: 2px;}
-}
-
-@media screen and (max-width: 290px) {
-    .weekdays li, .days li {width: 12.2%;}
-}
-</style>
-</asp:head>
-</head>
-<body>
-
-<h1>PTCollege Calendar</h1>
-
-<div class="month">      
-  <ul>
-    <li class="prev"><<</li>
-    <li class="next">>></li>
-    <li style="text-align:center">
-        <form runat="server"><% this.Month.InnerText = GetMonth(1); %></form>
-        <output id="Month" runat="server"></output>        
-      <br>
-      <span style="font-size:18px">2016</span>
-    </li>
-  </ul>
-</div>
-
-<ul class="weekdays">
-  <li>Mo</li>
-  <li>Tu</li>
-  <li>We</li>
-  <li>Th</li>
-  <li>Fr</li>
-  <li>Sa</li>
-  <li>Su</li>
-</ul>
-    
-
-<ul class="days">  
-  <li>1<output id="week1day1" runat="server"></output></li>
-  <li>2</li>
-  <li>3</li>
-  <li>4</li>
-  <li>5</li>
-  <li>6</li>
-  <li>7</li>
-  <li>8</li>
-  <li>9</li>
-  <li>10</li>
-  <li>11</li>
-  <li>12</li>
-  <li>13</li>
-  <li>14</li>
-  <li>15</li>
-  <li>16</li>
-  <li>17</li>
-  <li>18</li>
-  <li>19</li>
-  <li>20</li>
-  <li>21</li>
-  <li>22</li>
-  <li>23</li>
-  <li>24</li>
-  <li>25</li>
-  <li>26</li>
-  <li>27</li>
-  <li>28</li>
-  <li>29</li>
-  <li>30</li>
-  <li>31</li>
-</ul>
-
-
-   <h3>
-      
-   </h3>
-
-
-
-</body>
+    </body>
 </html>

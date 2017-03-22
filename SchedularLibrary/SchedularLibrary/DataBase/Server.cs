@@ -220,8 +220,7 @@ namespace ExperimentalProc.DataBase
             return pass;
         }
 
-        //this method must be tested and verified to work [MASTER]
-        //TODO: Alter this to work with new database [ALPHA]
+
         /*
          Attempts a brute force insert of all data considered valid by target parameters.
          Does not check against data inside database.
@@ -316,7 +315,7 @@ namespace ExperimentalProc.DataBase
                 //Pre insert Room Logic Here:
 
             }
-            else if (room == null)//Dan: roomID shouldn't be optional either, need to fix before push to master [MASTER]
+            else if (room == null)//Dan: roomID shouldn't be optional either, need to fix before push to master [MASTER] not-note: meh...
             {
                 roomParse = 0;
             }
@@ -427,26 +426,12 @@ namespace ExperimentalProc.DataBase
                         }
                     }
                 }//end if day specified
-
-                //Dan: right now the logic for this is poor, we can optimize speed and load on database by reducing the number of queries nessacary to detect a conflict
-                /* it can logicly be deduced that the minimum number of Queries to get the information we need is: (1 query for every valid day found in the schedualItems table that shares the same year and room value, and another query for each row found this way) by the following logic
-                 * 
-                 * if a day is not valid for upload it can't "possibly" conflict = <1>
-                 * <1> there for information used to deduce if a day is valid can be ignored if the day can be proven to "potentially" conflict = <2>
-                 * <1> + <2> there is one day in a calandar year for every day, since year is assumed if we only need day of year to prove potetial conflict = <3>
-                 * <3> there for: using (assumed)year and (target)day if no conflicts are detected no further assesment is required: since (target)day is assumed to be valid<1> then: 1 required query per valid day for upload = <A>
-                 * there can be multiple schedual items per day of the year = <4>
-                 * <4> an item can only conflict if it is in the same room = <5>
-                 * <A> + <4> since we can only upload for one room at a time, if comparison is limited to items with the same room<5> and year<3> then no additional queries are required using argument<A> = <B>
-                 * an item sharing the same room and day can only conflict if it occours within the same span of time = <6>
-                 * <6> since the span of time is idependent of a valid upload<1> and argument<A> is dependant on parameter<3> which is dependant on parameter<1> more information is required to detect a conflict = <7>
-                 * <7> there for: for every item that meets the conditions of argument<B> then 1 additional query is reqiured 
-                 */
+                
                 if (isValid)//if valid day
                 {
                     string[] badrows;
                     string[] colDats = { null, null, null, null, null, null, CF[curDay - 1].getDayID().ToString(), null, null };
-                    if (!IsConflict("SELECT * FROM [EnterpriseFinalBBB].[dbo].[Schedule] WHERE year IN (" + yearParse + ") AND Room_ID IN (" + roomParse + ");", colDats, out badrows))//checks for conflicting days of year
+                    if (!IsConflict("SELECT * FROM dbo.CALANDER_LIST WHERE LIST_YEAR IN (" + yearParse + ") AND ROOM_ID IN (" + roomParse + ");", colDats, out badrows))//checks for conflicting days of year
                     {
 
                         colDats = new string[] { null, null, null, null, null, null, null, startTimeParse.ToString(), endTimeParse.ToString() };//checks for conflicting rooms in days of year
@@ -454,7 +439,7 @@ namespace ExperimentalProc.DataBase
                         string[] rowGet;
                         for (int i = 0; i < badrows.Length; i++)
                         {
-                            if (IsConflictSingleRow("SELECT * FROM [EnterpriseFinalBBB].[dbo].[Schedule] WHERE List_ID IN (" + badrows[i] + ");", colDats, out rowGet))
+                            if (IsConflictSingleRow("SELECT * FROM dbo.CALANDER_LIST WHERE LIST_ID IN (" + badrows[i] + ");", colDats, out rowGet))
                             {
                                 TimeItem gotStart = new TimeItem(rowGet[7]);
                                 TimeItem gotend = new TimeItem(rowGet[8]);
@@ -474,9 +459,7 @@ namespace ExperimentalProc.DataBase
 
                     if (isValid)
                     {
-                        //add a line of text to the SQL command object that inserts the target data into the database : find valid days logic
-                        cmd.CommandText += "INSERT INTO Schedule(Class_ID,Room_ID,year,month,week,day,Start_Time,End_Time)\n"
-                                        + "VALUES(" + courseParse + "," + roomParse + "," + yearParse + "," + CF.getMonthByDay(curDay).getMonthID() + "," + CF.getDayOfWeek(curDay) + "," + CF[curDay - 1].getDayID() + ",'" + startTimeParse.ToString() + "','" + endTimeParse.ToString() + "');\n";
+                        cmd.CommandText += "INSERT INTO dbo.CALANDER_LIST(CLASS_ID,ROOM_ID,LIST_YEAR,LIST_MONTH,LIST_WEEK,LIST_DAY,START_TIME,END_TIME) VALUES(" + courseParse + "," + roomParse + "," + yearParse + "," + CF.getMonthByDay(curDay).getMonthID() + "," + CF.getDayOfWeek(curDay) + "," + curDay + ", '" + startTimeParse.ToString() + "', '" + endTimeParse.ToString() + "');\n";
                     }
                 }//end if valid day
 
@@ -504,7 +487,7 @@ namespace ExperimentalProc.DataBase
             return true;
         }//end InsertSchedualItem
 
-        //TODO: Alter this to work with new database[ALPHA]
+       
         /*
          * (bool) IsConflict(string selectQuery, string[] collumDats, out string[] badRows)
          * takes a query string that selects a table and compares it too a string array containg a set of row data for that table
@@ -570,7 +553,7 @@ namespace ExperimentalProc.DataBase
 
         }
 
-        //TODO: Alter this to work with new database[ALPHA]
+        
         //functions like IsCOnflict but for single row, and returns all data in row as string array
         private bool IsConflictSingleRow(string selectQuery, string[] collumDats, out string[] rowDats)
         {

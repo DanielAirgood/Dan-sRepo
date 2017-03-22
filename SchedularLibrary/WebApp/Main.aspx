@@ -10,6 +10,17 @@
             <label style="text-align:center; color:salmon; position:center;">THIS IS YOUR CALANDAAAAAAAR!</label>
             <table>
                 <tr>
+                    <!-- head -->
+                    <td><asp:DropDownList runat="server" ID="MonthList" OnSelectedIndexChanged=UpdateContent>
+                         <asp:ListItem value="1">January</asp:ListItem> 
+                        
+                        </asp:DropDownList></td>
+                    <td><asp:DropDownList runat="server" ID="YearList" OnSelectedIndexChanged=UpdateContent>
+                         <asp:ListItem value="2017">2017</asp:ListItem> 
+                        
+                        </asp:DropDownList></td>
+                </tr>
+                <tr>
                     <!-- Week1 -->
                     <td><output id="Su_W1" class=DayItem></output></td><td><output id="M_W1" class=DayItem></output></td><td><output id="Tu_W1" class=DayItem></output></td><td><output id="W_W1" class=DayItem></output></td><td><output id="Th_W1" class=DayItem></output></td><td><output id="F_W1" class=DayItem></output></td><td><output id="Sa_W1" class=DayItem></output></td>
                 </tr>

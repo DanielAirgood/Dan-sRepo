@@ -17,7 +17,10 @@ namespace WebApp
             CF = new CalanderFormater(2017);
             
             //this.Month.InnerText = GetMonth(1);
+
+            
         }
+
         public string GetMonth(int monthID)//current content is temporay, meant only to be used as referance
         {
             switch (monthID)
@@ -34,12 +37,22 @@ namespace WebApp
                 case 4:
                     return @"April";
                     break;
+                case 5:
+                    return @"May";
+                    break;
             }
             return "Month Data Not recognize";
         }
+
         public void GetDay(int dayID)
         {
             
+
+        }
+
+        //form actions
+        public void UpdateContent(object sender, EventArgs e)
+        {
 
         }
     }

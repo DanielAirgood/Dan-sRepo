@@ -19,12 +19,13 @@ namespace WebApp
         {
             
             DataBase = new ExperimentalProc.DataBase.Server();//DataBase Communication Object
+            
             /*
-            string[] month = new string[] { };
-            string[] week = new string[] { };
+            string[] month = new string[] {"1", "2", "4" };
+            string[] week = new string[] { "1", "2","3" };
             string[] day = new string[] { };
 
-            dat.InsertSchedualItem("2017", month, week, day, "404", "404", "05:00", "08:00");
+            DataBase.InsertSchedualItem("2017", month, week, day, "404", "404", "07:00", "09:00");
             */
 
             //dat.InsertUserIntoDataBase();//test statement

@@ -36,7 +36,7 @@ namespace ExperimentalProc.ClientManager
             return SessionID;
         }
 
-        ~Client()
+        public void Dispose()
         {
             using (DataBase.Server serv = new DataBase.Server())
             {

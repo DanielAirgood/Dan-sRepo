@@ -276,6 +276,14 @@ namespace ExperimentalProc.DataBase
             return true;
         }
     
+        //!!! Calandar Handel Code !!!
+
+            //retrives info from database and creates a string for inserting to web page
+        public bool RetriveDayItem(int year,int dayID, out string dayItemInfo)
+        {
+            dayItemInfo = null;
+            return false;
+        }
 
         /*
          Attempts a brute force insert of all data considered valid by target parameters.

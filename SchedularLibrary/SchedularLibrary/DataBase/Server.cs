@@ -16,8 +16,8 @@ using System.Diagnostics;
 
 
 namespace ExperimentalProc.DataBase
-{
-    public class Server
+{   
+    public class Server : IDisposable
     {
         private string DataBaseConectionString = null;
         protected SqlConnection connection;
@@ -52,7 +52,7 @@ namespace ExperimentalProc.DataBase
             }
 
         }
-
+        
         //TODO: Alter this to work with new database [ALPHA]
         //generic insert into database statment
         public bool InsertRoomIntoDataBase(string Room_ID, string Room_Name)
@@ -167,6 +167,8 @@ namespace ExperimentalProc.DataBase
             return true;
         }
 
+        //!!! User Handle Code!!!
+
         //attempts to insert passed values into dataBase. returns false if failed
         public bool InsertUserIntoDataBase()
         {
@@ -189,7 +191,6 @@ namespace ExperimentalProc.DataBase
             connection.Close();
             return true;
         }
-
 
         //Check if user is registered with password
         public bool RetriveUserFromDataBase(string userName, string password)
@@ -220,6 +221,61 @@ namespace ExperimentalProc.DataBase
             return pass;
         }
 
+        //Retrive UserID
+        public bool RetriveUserID(string userName, out int UserID)
+        {
+            bool pass = false;
+            UserID = 0;
+            SqlCommand cmd = new SqlCommand("SELECT USER_ID FROM dbo.USER_REGISTRY WHERE USER_NAME = '" + userName + "';", connection);
+
+            try
+            {
+                connection.Open();
+                UserID = (int) cmd.ExecuteScalar();
+                if (UserID != 0)
+                {
+                    pass = true;
+                }
+                else
+                {
+                    pass = false;
+                }
+            }
+            catch (SqlException excp)
+            {
+                Debug.WriteLine("Failed to run RetriveUserID: " + excp);
+                connection.Close();
+                return false;
+            }
+
+            connection.Close();
+
+            return pass;
+        }
+
+        //Update Session info
+        public bool UpdateUserSession(int UserID)
+        {
+            SqlCommand cmd = new SqlCommand();
+
+            try
+            {
+                connection.Open();
+                cmd.Connection = connection;
+                cmd.CommandText = "UPDATE dbo.USER_REGISTRY SET USER_SESSION = NULL WHERE USER_ID = "+ UserID +";";
+                cmd.ExecuteNonQuery();
+            }
+            catch (SqlException excp)
+            {
+                Debug.WriteLine("Failed to run UpdateUserSession: " + excp);
+                connection.Close();
+                return false;
+            }
+
+            connection.Close();
+            return true;
+        }
+    
 
         /*
          Attempts a brute force insert of all data considered valid by target parameters.
@@ -595,7 +651,9 @@ namespace ExperimentalProc.DataBase
             return true;
         }
 
-
-
+        public void Dispose()
+        {
+            //throw new NotImplementedException();
+        }
     }
 }

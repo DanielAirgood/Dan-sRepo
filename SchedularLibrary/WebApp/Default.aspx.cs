@@ -38,7 +38,7 @@ namespace WebApp
             //TODO:check user in database
             if(DataBase.RetriveUserFromDataBase(this.UserName.Text, this.Password.Text))
             {
-                Global.ClientManager.RetriveClient(Session.SessionID).User = this.UserName.Text;
+                Global.ClientManager.RetriveClient(Session.SessionID).Finish(this.UserName.Text);
 
                 Debug.WriteLine("WELL DONE YOU BANGEROF!" + Global.ClientManager.RetriveClient(Session.SessionID).User);
 

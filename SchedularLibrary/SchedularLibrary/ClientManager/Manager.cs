@@ -31,6 +31,7 @@ namespace ExperimentalProc.ClientManager
 
         public void RemoveUser(string sessionID)
         {
+            RetriveClient(sessionID).Dispose();
             ActiveUsers.Remove(RetriveClient(sessionID));
         }
         //TODO: overload this to remove client by object referance

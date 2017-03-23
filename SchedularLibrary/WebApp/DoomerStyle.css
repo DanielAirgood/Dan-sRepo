@@ -69,14 +69,24 @@ form{
     cursor: pointer;
 }
 
-output.DayItem{
-    width:200px;
+td{
+     width:14%;
     height:150px;
-    border-color:salmon;
-    border:groove;
+    border-color:black;
+    border-style:groove;
 }
 
-/
+.DayItem{
+    
+    
+}
+
+output{
+    fit:fill;
+    color: salmon;
+}
+
+/*
     margin-top:200px;
     margin-right:150px;*
     Dark-Grey: #3F3B3B

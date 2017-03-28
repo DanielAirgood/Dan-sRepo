@@ -282,7 +282,10 @@ namespace ExperimentalProc.DataBase
         public bool RetriveDayItem(int year,int dayID, out string dayItemInfo)
         {
             dayItemInfo = null;
-            return false;
+
+            dayItemInfo = "testdat" + year + " : " + dayID;
+
+            return true;
         }
 
         /*

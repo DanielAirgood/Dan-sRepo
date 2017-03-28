@@ -24,10 +24,11 @@ div {
 
 div.backGround{
     position:absolute;
-    height:100%;
-    width:100%;
+    /*height:100%;
+    width:100%;*/
     background-color:#3F3B3B;
     border-color:salmon;
+    fit:fill;
 }
 
 form{
@@ -74,6 +75,7 @@ td{
     height:150px;
     border-color:black;
     border-style:groove;
+    background-color:#3F3B3B;   
 }
 
 .DayItem{
@@ -81,7 +83,7 @@ td{
     
 }
 
-output{
+.Literal{
     fit:fill;
     color: salmon;
 }

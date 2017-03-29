@@ -96,7 +96,7 @@ namespace ExperimentalProc.Calandar
 
             return null;//returns null if it didn't find anything
         }
-
+        
         /*
          * (Month) getMonthByYear(int monthID): returns Month object as idetified by number of months into a year that month occurs
          */
@@ -114,6 +114,11 @@ namespace ExperimentalProc.Calandar
         public int getDayOfWeek(int dayID)
         {
             return ( (int) GC.GetDayOfWeek(new DateTime(this.year, getMonthByDay(dayID).getMonthID(), getMonthByDay(dayID).getDaysIntoMonth(getDayByYear(dayID)))) ) + 1;         
+        }
+
+        public int getYear()
+        {
+            return year;
         }
 
         public Day this[int index] 

@@ -14,16 +14,19 @@
                 height: 23px;
             }
         </style>
+        <title>
+            
+        </title>
     </head>
     <body>
         <link rel="stylesheet" href="DoomerStyle.css" />
         <form runat="server">
         <div class=backGround>
-            <label style="text-align:center; color:salmon; position:center;">THIS IS YOUR CALANDAAAAAAAR!</label>
-            <table style="width:100%;">
+            <label style="text-align:center; color:salmon; position:center; width: 100%;">THIS IS YOUR CALANDAAAAAAAR!</label>
+            <table style="width:100%">
                 <tr>
                     <!-- head -->
-                    <th><asp:DropDownList runat="server" ID="MonthList" OnSelectedIndexChanged=UpdateContent>
+                    <th><asp:DropDownList runat="server" ID="MonthList" OnSelectedIndexChanged=UpdateMonth>
                          <asp:ListItem value="1">January</asp:ListItem> 
                         
                         </asp:DropDownList></th>
@@ -34,23 +37,53 @@
                 </tr>
                 <tr>
                     <!-- Week1 -->
-                    <td class=DayItem><output id="Su_W1"></output></td> <td class=DayItem><output id="M_W1"></output></td> <td class=DayItem><output id="Tu_W1" class=DayItem></output></td><td class="auto-style2"><output id="W_W1" class=DayItem></output></td><td class=DayItem><output id="Th_W1" class=DayItem></output></td><td class=DayItem><output id="F_W1" class=DayItem></output></td><td class=DayItem><output id="Sa_W1" class=DayItem></output></td>
+                    <td> <asp:Literal runat="server" ID=D1W1>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D2W1>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D3W1>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D4W1>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D5W1>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D6W1>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D7W1>  </asp:Literal> </td>
                 </tr>
                 <tr>
                     <!-- Week2 -->
-                    <td class=DayItem><output id="Su_W2" style="width:100%"></output></td><td><output id="M_W2" class=DayItem></output></td><td><output id="Tu_W2" class=DayItem></output></td><td><output id="W_W2" class=DayItem></output></td><td><output id="Th_W2" class=DayItem></output></td><td><output id="F_W2" class=DayItem></output></td><td><output id="Sa_W2" class=DayItem></output></td>
+                    <td> <asp:Literal runat="server" ID=D1W2>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D2W2>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D3W2>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D4W2>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D5W2>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D6W2>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D7W2>  </asp:Literal> </td>
                 </tr>
                 <tr>
                     <!-- Week3 -->
-                    <td><output id="Su_W3" style="width:100%"></output></td><td><output id="M_W3" class=DayItem></output></td><td><output id="Tu_W3" class=DayItem></output></td><td><output id="W_W3" class=DayItem></output></td><td><output id="Th_W3" class=DayItem></output></td><td><output id="F_W3" class=DayItem></output></td><td><output id="Sa_W3" class=DayItem></output></td>
+                    <td> <asp:Literal runat="server" ID=D1W3>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D2W3>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D3W3>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D4W3>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D5W3>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D6W3>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D7W3>  </asp:Literal> </td>
                 </tr>
                 <tr>
                     <!-- Week4 -->
-                    <td><output id="Su_W4" class=DayItem></output></td><td><output id="M_W4" class=DayItem></output></td><td><output id="Tu_W4" class=DayItem></output></td><td><output id="W_W4" class=DayItem></output></td><td><output id="Th_W4" class=DayItem></output></td><td><output id="F_W4" class=DayItem></output></td><td><output id="Sa_W4" class=DayItem></output></td>
+                    <td> <asp:Literal runat="server" ID=D1W4>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D2W4>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D3W4>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D4W4>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D5W4>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D6W4>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D7W4>  </asp:Literal> </td>
                 </tr>
                 <tr>
                     <!-- Week5 -->
-                    <td><output id="Su_W5" class=DayItem></output></td><td><output id="M_W5" class=DayItem></output></td><td><output id="Tu_W5" class=DayItem></output></td><td><output id="W_W5" class=DayItem></output></td><td><output id="Th_W5" class=DayItem></output></td><td><output id="F_W5" class=DayItem></output></td><td><output id="Sa_W5" class=DayItem></output></td>
+                    <td> <asp:Literal runat="server" ID=D1W5>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D2W5>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D3W5>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D4W5>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D5W5>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D6W5>  </asp:Literal> </td>
+                    <td> <asp:Literal runat="server" ID=D7W5>  </asp:Literal> </td>
                 </tr>
             </table>
 

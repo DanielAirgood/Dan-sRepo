@@ -282,7 +282,16 @@ namespace ExperimentalProc.DataBase
         public bool RetriveDayItem(int year,int dayID, out string dayItemInfo)
         {
             dayItemInfo = null;
-            return false;
+
+            int valueDay = 1;//test value
+            string valueCourse = "Art";//test value
+            int valueRoom = 404;
+            string valueStartTime = "08:00";
+            string valueEndTime = "12:00";
+
+            dayItemInfo = "<label class=DayItem> <h3>" + dayID + "</h3> <hr />" + valueCourse + " : Room " + valueRoom + " <br /> " + valueStartTime +" - " + valueEndTime + " </label>";
+
+            return true;
         }
 
         /*

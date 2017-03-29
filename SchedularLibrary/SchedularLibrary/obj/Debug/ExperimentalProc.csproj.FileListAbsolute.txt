@@ -20,3 +20,8 @@ F:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.dl
 F:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.pdb
 F:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\Debug\ExperimentalProc.dll
 F:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\Debug\ExperimentalProc.pdb
+J:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\Debug\ExperimentalProc.dll
+J:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\bin\Debug\ExperimentalProc.pdb
+J:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.csprojResolveAssemblyReference.cache
+J:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.dll
+J:\Git\Dan-sRepo\SchedularLibrary\SchedularLibrary\obj\Debug\ExperimentalProc.pdb

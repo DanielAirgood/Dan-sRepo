@@ -24,8 +24,7 @@ div {
 
 div.backGround{
     position:absolute;
-    height:100%;
-    width:100%;
+    fit:fill;
     background-color:#3F3B3B;
     border-color:salmon;
 }
@@ -70,20 +69,22 @@ form{
 }
 
 td{
-     width:14%;
+    width:200px;
     height:150px;
     border-color:black;
     border-style:groove;
+    max-width:14%;
 }
 
 .DayItem{
-    
+    fit:fill;
+    color: salmon;
+    text-align:start;
     
 }
 
 output{
-    fit:fill;
-    color: salmon;
+    
 }
 
 /*

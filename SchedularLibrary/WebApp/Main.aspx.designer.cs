@@ -31,564 +31,318 @@ namespace WebApp {
         protected global::System.Web.UI.WebControls.DropDownList YearList;
         
         /// <summary>
-<<<<<<< HEAD
         /// D1W1 control.
-=======
-        /// Su_W1 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D1W1;
         
         /// <summary>
         /// D2W1 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Su_W1;
-        
-        /// <summary>
-        /// M_W1 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D2W1;
         
         /// <summary>
         /// D3W1 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal M_W1;
-        
-        /// <summary>
-        /// Tu_W1 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D3W1;
         
         /// <summary>
         /// D4W1 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Tu_W1;
-        
-        /// <summary>
-        /// W_W1 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D4W1;
         
         /// <summary>
         /// D5W1 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal W_W1;
-        
-        /// <summary>
-        /// Th_W1 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D5W1;
         
         /// <summary>
         /// D6W1 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Th_W1;
-        
-        /// <summary>
-        /// F_W1 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D6W1;
         
         /// <summary>
         /// D7W1 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal F_W1;
-        
-        /// <summary>
-        /// Sa_W1 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D7W1;
         
         /// <summary>
         /// D1W2 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Sa_W1;
-        
-        /// <summary>
-        /// Su_W2 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D1W2;
         
         /// <summary>
         /// D2W2 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Su_W2;
-        
-        /// <summary>
-        /// M_W2 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D2W2;
         
         /// <summary>
         /// D3W2 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal M_W2;
-        
-        /// <summary>
-        /// Tu_W2 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D3W2;
         
         /// <summary>
         /// D4W2 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Tu_W2;
-        
-        /// <summary>
-        /// W_W2 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D4W2;
         
         /// <summary>
         /// D5W2 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal W_W2;
-        
-        /// <summary>
-        /// Th_W2 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D5W2;
         
         /// <summary>
         /// D6W2 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Th_W2;
-        
-        /// <summary>
-        /// F_W2 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D6W2;
         
         /// <summary>
         /// D7W2 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal F_W2;
-        
-        /// <summary>
-        /// Sa_W2 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D7W2;
         
         /// <summary>
         /// D1W3 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Sa_W2;
-        
-        /// <summary>
-        /// Su_W3 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D1W3;
         
         /// <summary>
         /// D2W3 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Su_W3;
-        
-        /// <summary>
-        /// M_W3 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D2W3;
         
         /// <summary>
         /// D3W3 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal M_W3;
-        
-        /// <summary>
-        /// Tu_W3 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D3W3;
         
         /// <summary>
         /// D4W3 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Tu_W3;
-        
-        /// <summary>
-        /// W_W3 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D4W3;
         
         /// <summary>
         /// D5W3 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal W_W3;
-        
-        /// <summary>
-        /// Th_W3 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D5W3;
         
         /// <summary>
         /// D6W3 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Th_W3;
-        
-        /// <summary>
-        /// F_W3 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D6W3;
         
         /// <summary>
         /// D7W3 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal F_W3;
-        
-        /// <summary>
-        /// Sa_W3 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D7W3;
         
         /// <summary>
         /// D1W4 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Sa_W3;
-        
-        /// <summary>
-        /// Su_W4 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D1W4;
         
         /// <summary>
         /// D2W4 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Su_W4;
-        
-        /// <summary>
-        /// M_W4 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D2W4;
         
         /// <summary>
         /// D3W4 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal M_W4;
-        
-        /// <summary>
-        /// Tu_W4 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D3W4;
         
         /// <summary>
         /// D4W4 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Tu_W4;
-        
-        /// <summary>
-        /// W_W4 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D4W4;
         
         /// <summary>
         /// D5W4 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal W_W4;
-        
-        /// <summary>
-        /// Th_W4 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D5W4;
         
         /// <summary>
         /// D6W4 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Th_W4;
-        
-        /// <summary>
-        /// F_W4 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D6W4;
         
         /// <summary>
         /// D7W4 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal F_W4;
-        
-        /// <summary>
-        /// Sa_W4 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D7W4;
         
         /// <summary>
         /// D1W5 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Sa_W4;
-        
-        /// <summary>
-        /// Su_W5 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D1W5;
         
         /// <summary>
         /// D2W5 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Su_W5;
-        
-        /// <summary>
-        /// M_W5 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D2W5;
         
         /// <summary>
         /// D3W5 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal M_W5;
-        
-        /// <summary>
-        /// Tu_W5 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D3W5;
         
         /// <summary>
         /// D4W5 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Tu_W5;
-        
-        /// <summary>
-        /// W_W5 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D4W5;
         
         /// <summary>
         /// D5W5 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal W_W5;
-        
-        /// <summary>
-        /// Th_W5 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D5W5;
         
         /// <summary>
         /// D6W5 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal Th_W5;
-        
-        /// <summary>
-        /// F_W5 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D6W5;
         
         /// <summary>
         /// D7W5 control.
-=======
-        protected global::System.Web.UI.WebControls.Literal F_W5;
-        
-        /// <summary>
-        /// Sa_W5 control.
->>>>>>> origin/master
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-<<<<<<< HEAD
         protected global::System.Web.UI.WebControls.Literal D7W5;
-=======
-        protected global::System.Web.UI.WebControls.Literal Sa_W5;
->>>>>>> origin/master
     }
 }

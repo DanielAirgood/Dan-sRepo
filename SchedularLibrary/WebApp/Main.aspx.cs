@@ -12,18 +12,14 @@ namespace WebApp
     public partial class WebForm1 : System.Web.UI.Page
     {
         CalanderFormater CF;
-<<<<<<< HEAD
-        int month;
-        int year;
-=======
-        Month month;
->>>>>>> origin/master
+
+        int month;//monthID of data too display
+        int year;//year to be displayed
 
         protected void Page_Load(object sender, EventArgs e)
         {
 
-<<<<<<< HEAD
-            if (Session["Month"] != null)
+            if (Session["Month"] != null)//checks if user specified a month
             {
                 MonthList.SelectedValue = Session["Month"].ToString();
             }
@@ -33,13 +29,10 @@ namespace WebApp
 
             CF = new CalanderFormater(year);
 
-=======
-            month = CF.getMonthByYear(int.Parse(MonthList.SelectedValue));
-
->>>>>>> origin/master
-            UpdateContent(sender, e);
+            UpdateContent(sender, e);//fills the calandar with relevent data
         }
 
+        //Returns name of month based on monthID
         public string GetMonth(int monthID)//current content is temporay, meant only to be used as referance
         {
             switch (monthID)
@@ -84,6 +77,7 @@ namespace WebApp
             return "Month Data Not recognize";
         }
 
+        //returns monthID based on month name
         public int GetMonthID(string month)//current content is temporay, meant only to be used as referance
         {
             switch (month)
@@ -130,6 +124,8 @@ namespace WebApp
 
 
         //form actions
+        
+        //Retrives dayItem data from database and fills the calandar
         public void UpdateContent(object sender, EventArgs e)
         {
             Server dataBase = new Server();
@@ -532,6 +528,7 @@ namespace WebApp
             }
         }
 
+        //allows user to specify a month to display on page: called by Element(MonthList)
         protected void UpdateMonth(object sender, EventArgs e)
         {
             Session["Month"] = MonthList.SelectedValue;

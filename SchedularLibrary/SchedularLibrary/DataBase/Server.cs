@@ -283,7 +283,6 @@ namespace ExperimentalProc.DataBase
         {
             dayItemInfo = null;
 
-<<<<<<< HEAD
             int valueDay = 1;//test value
             string valueCourse = "Art";//test value
             int valueRoom = 404;
@@ -291,9 +290,6 @@ namespace ExperimentalProc.DataBase
             string valueEndTime = "12:00";
 
             dayItemInfo = "<label class=DayItem> <h3>" + dayID + "</h3> <hr />" + valueCourse + " : Room " + valueRoom + " <br /> " + valueStartTime +" - " + valueEndTime + " </label>";
-=======
-            dayItemInfo = "testdat" + year + " : " + dayID;
->>>>>>> origin/master
 
             return true;
         }

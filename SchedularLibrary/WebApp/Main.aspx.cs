@@ -128,41 +128,22 @@ namespace WebApp
             return 0;
         }
 
-<<<<<<< HEAD
-        public void GetDay(int dayID)
-        {
 
-
-        }
-
-=======
-        
->>>>>>> origin/master
         //form actions
         public void UpdateContent(object sender, EventArgs e)
         {
             Server dataBase = new Server();
 
-<<<<<<< HEAD
             string dayItemText;
             int curWeek = 1;
             for (int i = CF.getMonthByYear(month)[1].getDayID(); i <= CF.getMonthByYear(month).Days.Last<Day>().getDayID(); i++)//TODO: clean this mess
             {
                 switch (curWeek)
-=======
-            int curWeek = 1;
-            string TempDayItem;
-
-            for (int i = month.Days.First<Day>().getDayID(); i <= month.Days.Last<Day>().getDayID(); i++)
-            {
-                switch(curWeek)
->>>>>>> origin/master
                 {
                     case 1:
                         switch (CF.getDayOfWeek(i))
                         {
                             case 1:
-<<<<<<< HEAD
                                 if (dataBase.RetriveDayItem(year, i, out dayItemText))
                                 {
                                     D1W1.Text = dayItemText;
@@ -313,162 +294,12 @@ namespace WebApp
                                 break;
 
                         }//end day of week switch block
-=======
-                                if(dataBase.RetriveDayItem(CF.getYear(),i,out TempDayItem))
-                                {
-                                    this.Su_W1.Text = i +  ":<hr>" + TempDayItem;
-                                } else
-                                {
-                                    this.Su_W1.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 2:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.M_W1.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.M_W1.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 3:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Tu_W1.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Tu_W1.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 4:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.W_W1.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.W_W1.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 5:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Th_W1.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Th_W1.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 6:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.F_W1.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.F_W1.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 7:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Sa_W1.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Sa_W1.Text = "Failed To Retrive Data";
-                                }
-                                curWeek++;
-                                break;
-                        }
-                        break;
-
-                    case 2:
-                        switch (CF.getDayOfWeek(i))
-                        {
-                            case 1:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Su_W2.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Su_W2.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 2:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.M_W2.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.M_W2.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 3:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Tu_W2.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Tu_W2.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 4:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.W_W2.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.W_W2.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 5:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Th_W2.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Th_W2.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 6:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.F_W2.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.F_W2.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 7:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Sa_W2.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Sa_W2.Text = "Failed To Retrive Data";
-                                }
-                                curWeek++;
-                                break;
-                        }
->>>>>>> origin/master
                         break;
 
                     case 3:
                         switch (CF.getDayOfWeek(i))
                         {
                             case 1:
-<<<<<<< HEAD
                                 if (dataBase.RetriveDayItem(year, i, out dayItemText))
                                 {
                                     D1W3.Text = dayItemText;
@@ -541,86 +372,12 @@ namespace WebApp
                                 break;
 
                         }//end day of week switch block
-=======
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Su_W3.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Su_W3.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 2:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.M_W3.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.M_W3.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 3:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Tu_W3.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Tu_W3.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 4:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.W_W3.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.W_W3.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 5:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Th_W3.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Th_W3.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 6:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.F_W3.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.F_W3.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 7:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Sa_W3.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Sa_W3.Text = "Failed To Retrive Data";
-                                }
-                                curWeek++;
-                                break;
-                        }
->>>>>>> origin/master
                         break;
 
                     case 4:
                         switch (CF.getDayOfWeek(i))
                         {
                             case 1:
-<<<<<<< HEAD
                                 if (dataBase.RetriveDayItem(year, i, out dayItemText))
                                 {
                                     D1W4.Text = dayItemText;
@@ -692,86 +449,12 @@ namespace WebApp
                                 }
                                 break;
                         }//end day of week switch block
-=======
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Su_W4.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Su_W4.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 2:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.M_W4.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.M_W4.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 3:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Tu_W4.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Tu_W4.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 4:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.W_W4.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.W_W4.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 5:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Th_W4.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Th_W4.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 6:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.F_W4.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.F_W4.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 7:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Sa_W4.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Sa_W4.Text = "Failed To Retrive Data";
-                                }
-                                curWeek++;
-                                break;
-                        }
->>>>>>> origin/master
                         break;
 
                     case 5:
                         switch (CF.getDayOfWeek(i))
                         {
                             case 1:
-<<<<<<< HEAD
                                 if (dataBase.RetriveDayItem(year, i, out dayItemText))
                                 {
                                     D1W5.Text = dayItemText;
@@ -852,91 +535,7 @@ namespace WebApp
         protected void UpdateMonth(object sender, EventArgs e)
         {
             Session["Month"] = MonthList.SelectedValue;
-            Response.Redirect(Request.RawUrl);
-=======
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Su_W5.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Su_W5.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 2:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.M_W5.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.M_W5.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 3:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Tu_W5.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Tu_W5.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 4:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.W_W5.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.W_W5.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 5:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Th_W5.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Th_W5.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 6:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.F_W5.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.F_W5.Text = "Failed To Retrive Data";
-                                }
-                                break;
-                            case 7:
-                                if (dataBase.RetriveDayItem(CF.getYear(), i, out TempDayItem))
-                                {
-                                    this.Sa_W5.Text = i + ":<hr>" + TempDayItem;
-                                }
-                                else
-                                {
-                                    this.Sa_W5.Text = "Failed To Retrive Data";
-                                }
-                                curWeek++;
-                                break;
-                        }
-                        break;
-                        
-                }//end week case
-            }
-
-            this.Construct();
-        }//end updateContent
-
-        protected void ChangeMonth(object sender, EventArgs e)
-        {
-            //use session to store month to display
->>>>>>> origin/master
+            Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
         }
     }
 }

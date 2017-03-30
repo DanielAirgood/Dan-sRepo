@@ -79,11 +79,7 @@ td{
     height:150px;
     border-color:black;
     border-style:groove;
-<<<<<<< HEAD
     max-width:14%;
-=======
-    background-color:#3F3B3B;   
->>>>>>> origin/master
 }
 
 .DayItem{
@@ -93,14 +89,9 @@ td{
     
 }
 
-<<<<<<< HEAD
-output{
-    
-=======
 .Literal{
     fit:fill;
     color: salmon;
->>>>>>> origin/master
 }
 
 /*

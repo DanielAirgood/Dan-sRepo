@@ -40,6 +40,8 @@ namespace ExperimentalProc.ClientManager
         {
             using (DataBase.Server serv = new DataBase.Server())
             {
+                
+
                 if (serv.UpdateUserSession(this.UserID))
                 {
                     //if UpdateUserSession pass

@@ -534,5 +534,11 @@ namespace WebApp
             Session["Month"] = MonthList.SelectedValue;
             Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
         }
+
+        protected void UpdateYear(object sender, EventArgs e)
+        {
+            Session["Year"] = YearList.SelectedValue;
+            Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
+        }
     }
 }

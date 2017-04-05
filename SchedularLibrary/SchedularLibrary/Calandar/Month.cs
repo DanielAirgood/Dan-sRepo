@@ -57,11 +57,27 @@ namespace ExperimentalProc.Calandar
             return Days[daysIntoMonth - 1];
         }
 
+        //returns day of month based on day object
         public int getDaysIntoMonth(Day day)
         {
             for (int i = 0; i < Days.Count; i++)
             {
                 if (Days[i].getDayID() == day.getDayID())
+                {
+                    return i + 1;
+                }
+            }
+
+            return 0;//returns 0 if it didn't find anything
+
+        }
+
+        //returns day of month based on dayID
+        public int getDaysIntoMonth(int dayID)
+        {
+            for (int i = 0; i < Days.Count; i++)
+            {
+                if (Days[i].getDayID() == dayID)
                 {
                     return i + 1;
                 }

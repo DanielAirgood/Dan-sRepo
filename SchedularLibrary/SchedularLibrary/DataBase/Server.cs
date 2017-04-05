@@ -253,6 +253,36 @@ namespace ExperimentalProc.DataBase
             return pass;
         }
 
+        //Retrive UserAccessRights
+        public bool RetriveUserRights(int UserID, out int AccessRights)
+        {
+            AccessRights = -1;
+
+            bool pass = false;
+            SqlCommand cmd = new SqlCommand("SELECT USER_PRIVLAGE FROM dbo.USER_REGISTRY WHERE USER_ID = " + UserID + ";", connection);
+
+            try
+            {
+                connection.Open();
+                AccessRights = (int)cmd.ExecuteScalar();
+                if (AccessRights != -1)
+                {
+                    pass = true;
+                }
+                
+            }
+            catch (SqlException excp)
+            {
+                Debug.WriteLine("Failed to run RetriveUserAccessRights: " + excp);
+                connection.Close();
+                return false;
+            }
+
+            connection.Close();
+
+            return pass;
+        }
+
         //Update Session info
         public bool UpdateUserSession(int UserID)
         {
@@ -262,7 +292,7 @@ namespace ExperimentalProc.DataBase
             {
                 connection.Open();
                 cmd.Connection = connection;
-                cmd.CommandText = "UPDATE dbo.USER_REGISTRY SET USER_SESSION = NULL WHERE USER_ID = "+ UserID +";";
+                cmd.CommandText = "UPDATE dbo.USER_REGISTRY SET USER_SESSION = NULL WHERE USER_ID = "+ UserID +";";//TODO: change this to insert Session as ByteArray
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException excp)
@@ -281,15 +311,52 @@ namespace ExperimentalProc.DataBase
             //retrives info from database and creates a string for inserting to web page
         public bool RetriveDayItem(int year,int dayID, out string dayItemInfo)
         {
-            dayItemInfo = null;
+            
+            Calandar.CalanderFormater CF = new Calandar.CalanderFormater(year);
 
-            int valueDay = 1;//test value
-            string valueCourse = "Art";//test value
+            dayItemInfo = "<label class=DayItem> <h3>" + CF.getMonthByDay(dayID).getDaysIntoMonth(dayID) + "</h3>";
+
+
+            //int valueDay = 1;//deadcode: removed because passed value (dayID) can be assumed to be equivilant
+            int valueCourse = 404;//test value
             int valueRoom = 404;
             string valueStartTime = "08:00";
             string valueEndTime = "12:00";
 
-            dayItemInfo = "<label class=DayItem> <h3>" + dayID + "</h3> <hr />" + valueCourse + " : Room " + valueRoom + " <br /> " + valueStartTime +" - " + valueEndTime + " </label>";
+            string queryString = "SELECT CLASS_ID, ROOM_ID, START_TIME, END_TIME FROM dbo.CALANDER_LIST WHERE LIST_YEAR = " + year + " AND LIST_DAY = " + dayID + ";";
+
+            SqlCommand cmd = new SqlCommand(queryString, connection);
+
+            try
+            {
+
+                connection.Open();
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    valueCourse = (int)reader.GetSqlInt32(0);
+                    valueRoom = (int) reader.GetSqlInt32(1);
+                    valueStartTime = (string) reader.GetSqlString(2);
+                    valueEndTime = (string)reader.GetSqlString(3);
+
+                    dayItemInfo += "<hr />" + valueCourse + " : Room " + valueRoom + " <br /> " + valueStartTime + " - " + valueEndTime + " </label>";
+                }
+                reader.Close();
+                connection.Close();
+
+            }
+            catch (SqlException excp)
+            {
+                dayItemInfo += "<hr /> failed to read on database";
+                Debug.WriteLine("failed on read day item" + excp);
+                return false;
+
+            }
+
+
+            
+            
 
             return true;
         }
@@ -503,7 +570,7 @@ namespace ExperimentalProc.DataBase
                 if (isValid)//if valid day
                 {
                     string[] badrows;
-                    string[] colDats = { null, null, null, null, null, null, CF[curDay - 1].getDayID().ToString(), null, null };
+                    string[] colDats = { null, null, null, null, null, null, CF[curDay].getDayID().ToString(), null, null };
                     if (!IsConflict("SELECT * FROM dbo.CALANDER_LIST WHERE LIST_YEAR IN (" + yearParse + ") AND ROOM_ID IN (" + roomParse + ");", colDats, out badrows))//checks for conflicting days of year
                     {
 

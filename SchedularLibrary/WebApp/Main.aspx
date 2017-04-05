@@ -36,7 +36,7 @@
                         <asp:ListItem value="3">March</asp:ListItem>
                         
                         </asp:DropDownList></th>
-                    <th><asp:DropDownList runat="server" ID="YearList" OnSelectedIndexChanged=UpdateContent>
+                    <th><asp:DropDownList runat="server" ID="YearList" OnSelectedIndexChanged=UpdateYear>
                          <asp:ListItem value="2017">2017</asp:ListItem> 
                         
                         </asp:DropDownList></th>

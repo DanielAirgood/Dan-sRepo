@@ -12,12 +12,12 @@
                 <table style="padding-left:50px;">
                     <tr>
                         <td>
-                            <asp:TextBox CssClass=text-field runat=server ID="UserName" ></asp:TextBox>
+                            UserName:<asp:TextBox CssClass=text-field runat=server ID="UserName" ></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <asp:TextBox CssClass=text-field runat=server ID="Password"></asp:TextBox>
+                            Password:<asp:TextBox CssClass=text-field runat=server ID="Password"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>

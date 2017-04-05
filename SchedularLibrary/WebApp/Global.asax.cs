@@ -9,6 +9,7 @@ using System.Web.SessionState;
 using ExperimentalProc.ClientManager;
 using System.Diagnostics;//Debug: remove for release
 
+
 namespace WebApp
 {
     public class Global : HttpApplication
@@ -36,7 +37,7 @@ namespace WebApp
         void Session_End(object sender, EventArgs e)
         {
             Debug.WriteLine("End Session: " + Session.SessionID);//Debug
-
+            
             ClientManager.RemoveUser(Session.SessionID);
 
             //TODO: add active page recall

@@ -23,7 +23,7 @@ div {
 }
 
 div.backGround{
-    position:absolute;
+    /*position:absolute;*/
     fit:fill;
     background-color:#3F3B3B;
     border-color:salmon;

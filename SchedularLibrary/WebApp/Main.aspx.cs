@@ -540,5 +540,41 @@ namespace WebApp
             Session["Year"] = YearList.SelectedValue;
             Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
         }
+
+        protected void Upload(object sender, EventArgs e)
+        {
+            Server DataBase = new Server();
+            
+            string[] month = targetMonths.Text.Split(' ');
+            if (month[0] == "")
+            {
+                month = new string[0];
+            }
+
+            string[] week = targetWeekDays.Text.Split(' ');
+            if (week[0] == "")
+            {
+                week = new string[0];
+            }
+
+            string[] day = targetDays.Text.Split(' ');
+            if (day[0] == "")
+            {
+                day = new string[0];
+            }
+
+            
+
+
+
+            if(DataBase.InsertSchedualItem(targetYear.Text, month, week, day, targetRoom.Text, targetCourse.Text, targetStart.Text, targetEnd.Text))
+            {
+                Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
+            }else
+            {
+                MessageText.Text = "Failed to upload content too database. (check your syntax?)";
+                //Message.Update();
+            }
+        }
     }
 }

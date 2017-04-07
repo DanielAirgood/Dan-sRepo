@@ -17,9 +17,7 @@
                 height: 23px;
             }
         </style>
-        <title>
-            
-        </title>
+        
     </head>
     <body>
         <link rel="stylesheet" href="DoomerStyle.css" />
@@ -30,14 +28,25 @@
             <table style="width:100%;">
                 <tr>
                     <!-- head -->
-                    <th><asp:DropDownList runat="server" ID="MonthList" OnSelectedIndexChanged=UpdateMonth>
+                    <th><asp:DropDownList runat="server" ID="MonthList" OnSelectedIndexChanged=UpdateMonth OnTextChanged="UpdateMonth">
                         <asp:ListItem value="1">January</asp:ListItem>
                         <asp:ListItem value="2">Febuary</asp:ListItem>
                         <asp:ListItem value="3">March</asp:ListItem>
+                        <asp:ListItem value="4">April</asp:ListItem>
+                        <asp:ListItem value="5">May</asp:ListItem>
+                        <asp:ListItem value="6">June</asp:ListItem>
+                        <asp:ListItem value="7">July</asp:ListItem>
+                        <asp:ListItem value="8">August</asp:ListItem>
+                        <asp:ListItem value="9">September</asp:ListItem>
+                        <asp:ListItem value="10">October</asp:ListItem>
+                        <asp:ListItem value="11">November</asp:ListItem>
+                        <asp:ListItem value="12">December</asp:ListItem>
                         
                         </asp:DropDownList></th>
-                    <th><asp:DropDownList runat="server" ID="YearList" OnSelectedIndexChanged=UpdateYear>
+                    <th><asp:DropDownList runat="server" ID="YearList" OnSelectedIndexChanged=UpdateYear OnTextChanged="UpdateYear">
                          <asp:ListItem value="2017">2017</asp:ListItem> 
+                        <asp:ListItem value="2018">2018</asp:ListItem> 
+                        <asp:ListItem value="2019">2019</asp:ListItem> 
                         
                         </asp:DropDownList></th>
                 </tr>
@@ -94,6 +103,30 @@
             </table>
 
         </div>
+
+            <div>
+                Year:<asp:TextBox runat="server" ID="targetYear"></asp:TextBox>
+                <br />
+                Months:<asp:TextBox runat="server" ID="targetMonths"></asp:TextBox>
+                <br />
+                Days of Week:<asp:TextBox runat="server" ID="targetWeekDays"></asp:TextBox>
+                <br />
+                Days of Month:<asp:TextBox runat="server" ID="targetDays"></asp:TextBox>
+                <br />
+                Room Number:<asp:TextBox runat="server" ID="targetRoom"></asp:TextBox>
+                <br />
+                Course Name:<asp:TextBox runat="server" ID="targetCourse"></asp:TextBox>
+                <br />
+                Starting Time:<asp:TextBox runat="server" ID="targetStart"></asp:TextBox>
+                <br />
+                Ending Time:<asp:TextBox runat="server" ID="targetEnd"></asp:TextBox>
+                <br />
+                <asp:Button runat="server" Text="UploadToCalandar" OnClick="Upload" />
+                <br />
+                <asp:ScriptManager runat="server"></asp:ScriptManager>
+                <asp:UpdatePanel runat="server" ID="Message"> <ContentTemplate><asp:Label runat="server" ID="MessageText"></asp:Label></ContentTemplate> </asp:UpdatePanel>
+                    
+            </div>
       </form>
     </body>
 </html>

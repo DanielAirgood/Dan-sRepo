@@ -37,6 +37,8 @@ namespace WebApp
         void Session_End(object sender, EventArgs e)
         {
             Debug.WriteLine("End Session: " + Session.SessionID);//Debug
+
+            ClientManager.RetriveClient(Session.SessionID).UpdateSessionInfo(Session);
             
             ClientManager.RemoveUser(Session.SessionID);
 

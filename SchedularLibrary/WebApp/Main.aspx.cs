@@ -18,14 +18,17 @@ namespace WebApp
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            if (Session["Month"] != null)//checks if user specified a month
+            if (!IsPostBack)
             {
-                MonthList.SelectedValue = Session["Month"].ToString();
+                if (Session["Month"] != null)//checks if user specified a month
+                {
+                    MonthList.SelectedIndex = int.Parse(Session["Month"].ToString()) - 1;
+                }
             }
 
-            year = int.Parse(this.YearList.SelectedValue);
             month = int.Parse(MonthList.SelectedValue);
+            year = int.Parse(this.YearList.SelectedValue);
+            
 
             CF = new CalanderFormater(year);
 
@@ -532,13 +535,13 @@ namespace WebApp
         protected void UpdateMonth(object sender, EventArgs e)
         {
             Session["Month"] = MonthList.SelectedValue;
-            Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
+            Response.Redirect(Request.RawUrl);
         }
 
         protected void UpdateYear(object sender, EventArgs e)
         {
             Session["Year"] = YearList.SelectedValue;
-            Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
+            Response.Redirect(Request.RawUrl);
         }
 
         protected void Upload(object sender, EventArgs e)
@@ -569,7 +572,7 @@ namespace WebApp
 
             if(DataBase.InsertSchedualItem(targetYear.Text, month, week, day, targetRoom.Text, targetCourse.Text, targetStart.Text, targetEnd.Text))
             {
-                Response.Redirect(Request.RawUrl);//this.Construct()//may want to test this as an alternitive rePaint action
+                Response.Redirect(Request.RawUrl);
             }else
             {
                 MessageText.Text = "Failed to upload content too database. (check your syntax?)";

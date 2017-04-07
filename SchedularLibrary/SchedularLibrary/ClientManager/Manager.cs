@@ -31,7 +31,7 @@ namespace ExperimentalProc.ClientManager
 
         public void RemoveUser(string sessionID)
         {
-            RetriveClient(sessionID).Dispose();
+            //RetriveClient(sessionID).Dispose();//deadcode, replaced by updateSessionInfo in Global.asax
             ActiveUsers.Remove(RetriveClient(sessionID));
         }
         //TODO: overload this to remove client by object referance

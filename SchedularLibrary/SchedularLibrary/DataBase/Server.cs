@@ -9,6 +9,7 @@ using System.Globalization;
 using System.Reflection;
 using System.Diagnostics;
 
+
 //Contians problems that must be fixed before push to master [MASTER]
 //Contains problems that *SHOULD* be fixed before end of alpha phase [ALPHA]
 //Contains problems that would be nice to resolve [TODO]
@@ -215,6 +216,12 @@ namespace ExperimentalProc.DataBase
                 connection.Close();
                 return false;
             }
+            catch(NullReferenceException excp)
+            {
+                Debug.WriteLine("Failed to run InsertIntoDataBase: " + excp);
+                connection.Close();
+                return false;
+            }
 
             connection.Close();
 
@@ -284,7 +291,7 @@ namespace ExperimentalProc.DataBase
         }
 
         //Update Session info
-        public bool UpdateUserSession(int UserID)
+        public bool UpdateUserSession(int UserID, object Session)
         {
             SqlCommand cmd = new SqlCommand();
 
@@ -292,7 +299,7 @@ namespace ExperimentalProc.DataBase
             {
                 connection.Open();
                 cmd.Connection = connection;
-                cmd.CommandText = "UPDATE dbo.USER_REGISTRY SET USER_SESSION = NULL WHERE USER_ID = "+ UserID +";";//TODO: change this to insert Session as ByteArray
+                cmd.CommandText = "UPDATE dbo.USER_REGISTRY SET USER_SESSION = " + Session + " WHERE USER_ID = "+ UserID +";";//TODO: change this to insert Session as ByteArray
                 cmd.ExecuteNonQuery();
             }
             catch (SqlException excp)

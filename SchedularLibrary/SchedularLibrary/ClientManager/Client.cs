@@ -36,13 +36,13 @@ namespace ExperimentalProc.ClientManager
             return SessionID;
         }
 
-        public void Dispose()
+        public void UpdateSessionInfo(object Session)
         {
             using (DataBase.Server serv = new DataBase.Server())
             {
                 
 
-                if (serv.UpdateUserSession(this.UserID))
+                if (serv.UpdateUserSession(this.UserID, Session))
                 {
                     //if UpdateUserSession pass
                 }

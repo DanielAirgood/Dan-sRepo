@@ -28,7 +28,7 @@
             <table style="width:100%;">
                 <tr>
                     <!-- head -->
-                    <th><asp:DropDownList runat="server" ID="MonthList" OnSelectedIndexChanged=UpdateMonth OnTextChanged="UpdateMonth">
+                    <th><asp:DropDownList runat="server" ID="MonthList">
                         <asp:ListItem value="1">January</asp:ListItem>
                         <asp:ListItem value="2">Febuary</asp:ListItem>
                         <asp:ListItem value="3">March</asp:ListItem>
@@ -42,13 +42,13 @@
                         <asp:ListItem value="11">November</asp:ListItem>
                         <asp:ListItem value="12">December</asp:ListItem>
                         
-                        </asp:DropDownList></th>
-                    <th><asp:DropDownList runat="server" ID="YearList" OnSelectedIndexChanged=UpdateYear OnTextChanged="UpdateYear">
+                        </asp:DropDownList><asp:Button runat="server" Text="Change Month" OnClick=UpdateMonth /></th>
+                    <th><asp:DropDownList runat="server" ID="YearList">
                          <asp:ListItem value="2017">2017</asp:ListItem> 
                         <asp:ListItem value="2018">2018</asp:ListItem> 
                         <asp:ListItem value="2019">2019</asp:ListItem> 
                         
-                        </asp:DropDownList></th>
+                        </asp:DropDownList><asp:Button runat="server" Text="Change Year" OnClick=UpdateYear /></th>
                 </tr>
                 <tr>
                     <!-- Week1 -->

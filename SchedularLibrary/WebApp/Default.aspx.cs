@@ -39,7 +39,7 @@ namespace WebApp
             if(DataBase.RetriveUserFromDataBase(this.UserName.Text, this.Password.Text))
             {
                 Global.ClientManager.RetriveClient(Session.SessionID).Finish(this.UserName.Text);
-
+                Global.ClientManager.RetriveClient(Session.SessionID).UpdateSessionInfo(Session.ToString());
                 Debug.WriteLine("WELL DONE YOU BANGEROF!" + Global.ClientManager.RetriveClient(Session.SessionID).User);
 
                 Response.Redirect("Main.aspx");
